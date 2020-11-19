@@ -1,6 +1,7 @@
 import React, { useEffect, useState}from 'react';
 import styled from 'styled-components';
 import Country from './country'
+import {useSelector} from 'react-redux'
 
 const ListaPaisStyled= styled.div`
 display: grid;
@@ -12,6 +13,7 @@ justify-content: center;
 padding: 4em 2em;   
 `;
 function ListaPais(){
+    const state = useSelector((state)=>state.ListaPais)
     const [ListaPais, setListapais]= useState([])
     useEffect(()=>{
         fetch('https://restcountries.eu/rest/v2/all')
@@ -34,6 +36,7 @@ function ListaPais(){
                         <Country 
                         flag={flag}
                         name={name}
+                        key={name}
                         population={population}
                         region={region}
                         capital={capital}
