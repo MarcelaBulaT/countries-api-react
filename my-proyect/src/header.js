@@ -1,11 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import Diseño from './diseño';
+
 
 const HeaderStyled = styled.div`
 background: var(--blanco);
-display: flex;
-justify-content: space-between;
+margin-bottom: 1em;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,.06);
+.contenedor{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.noche{
+    i{
+        transform: rotate(-25deg);
+        margin-right: 15px;
+    }  
+}
+h1{
+    font-size: 14px;
+}
+p{
+    font-size: 12px;
+}
+
 `;
 
 function Header() {
@@ -13,18 +33,16 @@ function Header() {
 
     }
     return (
-        <HeaderStyled>
-            <Diseño>
+        <HeaderStyled> 
             <div className="contenedor">
-            <p> Where in the world?</p>
+            <h1> Where in the world?</h1>
             <div className="noche">
             <p onClick="CambioClick">
             <i class="far fa-moon"></i>
              Dark Mode
              </p>
             </div>
-            </div>
-            </Diseño>
+            </div>  
         </HeaderStyled>
     )
 }

@@ -13,8 +13,8 @@ justify-content: center;
 padding: 4em 2em;   
 `;
 function ListaPais(){
-    const state = useSelector((state)=>state.ListaPais)
-    const [ListaPais, setListapais]= useState([])
+    /* const state = useSelector((state)=>state.ListaPais) */
+    const [ListaPais, setListapais]= useState([]) 
     useEffect(()=>{
         fetch('https://restcountries.eu/rest/v2/all')
         .then((response) =>{
