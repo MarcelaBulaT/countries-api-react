@@ -1,14 +1,14 @@
-html{
+html {
   font-size: 14px;
 }
-:root{
-  --negro:#111517;
+:root {
+  --negro: #111517;
   --blanco: white;
-  --fondo: #fafafa; 
+  --fondo: #fafafa;
 }
-body{
+body {
   background: var(--fondo);
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   color: var(--negro);
 }
 .App {
